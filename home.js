@@ -1,8 +1,8 @@
 // show modal on page load
 
-$(window).on("load", function () {
-    $("#exampleModal").modal("show");
-});
+// $(window).on("load", function () {
+//     $("#exampleModal").modal("show");
+// });
 
 // section4  sale banner looping
 

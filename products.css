@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+}
+ul {
+    text-decoration: none;
+    list-style: none;
+}
+body {
+    font-family: Avenir, Helvetica Neue, Helvetica, Arial, sans-serif;
+}
+/* 11111111111111111111111111111111111111111111111111 */
+.saleHeader {
+    height: 40px;
+    background-color: black;
+    color: white;
+    font-size: 12px;
+    line-height: 1.6;
+    font-weight: 900;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+.saleHeader a {
+    color: white;
+    margin-left: 10px;
+    border-bottom: 1px solid white;
+    font-weight: bold;
+}
+
+/* 2222222222222222222222222222222222222222222222222222222 */
+.section2 {
+    padding: 0 4%;
+}
+.searchHeader {
+    width: 100%;
+    /* height: 60px; */
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+}
+.logo img {
+    /* height: 100px; */
+    width: 150px;
+    cursor: pointer;
+}
+.searchRight {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 30px;
+}
+.searchRight input {
+    border: none;
+    cursor: text;
+}
+.inputBox {
+    border-bottom: 1px solid black;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+}
+.inputBox input:focus-visible {
+    outline: none;
+}
+.searchRight input[placeholder] {
+    font-size: 14px;
+    padding: 5px;
+    color: grey;
+    font-weight: 400px;
+    margin-left: 10px;
+}
+.inputBox::before {
+    content: url("./images/searchIcon.svg");
+    width: 20px;
+    display: block;
+    position: relative;
+}
+.cartLogo img {
+    width: 40px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+/* 33333333333333333333333333333333333333333333333333333333 */
+.section3 {
+    padding: 0 4%;
+    border-bottom: 1px solid #d3d3d3;
+}
+.linkHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+}
+ul.shoppingLinks {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ul.shoppingLinks li {
+    padding: 10px;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 16px;
+    border-bottom: 2px solid transparent;
+    position: relative;
+    cursor: pointer;
+}
+ul.shoppingLinks li:hover {
+    border-bottom: 2px solid black;
+}
+.womenDDWrapper {
+    /* display: none; */
+    position: absolute;
+    z-index: 8;
+    width: 100%;
+}
+.womenDD {
+    padding: 0 5%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 55vh;
+    align-items: flex-start;
+}
+.womenDD ul {
+    width: 25%;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 18px;
+    letter-spacing: 0.01em;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.womenDD ul li {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    font-style: normal;
+    padding: 5px 5px 5px 0;
+    cursor: pointer;
+}
+.womenDD ul li:hover {
+    font-size: 14px;
+}
