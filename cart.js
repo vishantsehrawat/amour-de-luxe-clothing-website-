@@ -1,5 +1,4 @@
-let products = [];
-let cartData = JSON.parse(localStorage.getItem("cart")) || [];
+let grandTotal = 0;
 // Dropdown
 
 var dropDownContent = document.getElementById("womenDD");
@@ -11,20 +10,14 @@ function mouseOutToggle() {
     dropDownContent.style.display = "none";
 }
 
-// showing api data
-let api = "https://63c822925c0760f69ac60c18.mockapi.io/product";
-getData();
-async function getData() {
-    let result = await fetch(api);
-    let data = await result.json();
-    products = data;
-    // console.log(products);
-    displayData(products);
-}
+// showing cart data on page
 
-let productContainer = document.getElementById("productsList");
+let cartData = JSON.parse(localStorage.getItem("cart")) || [];
+console.log(cartData);
+let productContainer = document.getElementById("leftProductDisplay");
+
+displayData(cartData);
 function displayData(products) {
-    // console.log(products);
     productContainer.innerHTML = null;
     products.forEach((el, index) => {
         let product = document.createElement("div");
@@ -37,21 +30,27 @@ function displayData(products) {
         let productPrice = document.createElement("p");
         productPrice.setAttribute("class", "productPrice");
         productPrice.innerText = el.price;
-
-        let addToCart = document.createElement("button");
-        addToCart.setAttribute("class", "addToCartBtn");
-        addToCart.innerText = "Add To Cart";
-        addToCart.addEventListener("click", function () {
-            let newData = products.filter(function (element, ind) {
-                if (ind == index) {
-                    alert("Product Added to Cart");
-                    cartData.push(element);
+        //calculating the grand total of cart
+        grandTotal = grandTotal + Number(el.price);
+        // deleting from cart
+        let removeProduct = document.createElement("button");
+        removeProduct.setAttribute("class", "removeProductBtn");
+        removeProduct.innerText = "Remove";
+        removeProduct.addEventListener("click", function () {
+            let cartData = products.filter((el, i) => {
+                if (i !== index) {
+                    return true;
                 }
             });
-            console.log(cartData);
+            grandTotal = 0;
+            displayData(cartData);
             localStorage.setItem("cart", JSON.stringify(cartData));
         });
-        product.append(productImage, productName, productPrice, addToCart);
+
+        product.append(productImage, productName, productPrice, removeProduct);
         productContainer.append(product);
     });
+    // appending grandTotal
+    document.getElementById("grandTotal").textContent = grandTotal;
+    // console.log(grandTotal);
 }

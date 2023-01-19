@@ -6,24 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="products.css">
-    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
-        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="cart.css">
 </head>
 
 <body>
-
     <!-- main black sale header -->
     <section>
         <div class="saleHeader">
@@ -45,9 +31,7 @@
                     <input type="text" placeholder="Search">
                 </div>
                 <div class="cartLogo">
-                    <a href="./cart.html">
-                        <img src="./images/cart.svg" alt="img">
-                    </a>
+                    <img src="./images/cart.svg" alt="img">
                 </div>
             </div>
         </div>
@@ -124,30 +108,30 @@
 
         </ul>
     </div>
-    <!-- LEFT PANEL` -->
-    <div class="sectionLeftPanel">
-        <div class="leftPanel">
-            <div class="filterbyDiv">
-                <p class="filterbyText">Filter By</p>
-                <select name="price" id="filter">
-                    <option value="Default">Default</option>
-                    <option value="Low To High">Low To High</option>
-                    <option value="High To Low">High To Low</option>
-                </select>
-            </div>
-            <div class="sortbyDiv">
-                <p class="sortbyText">Sort By</p>
+
+    <p class="cartHeading">Your cart </p>
+    <div class="cartContainer">
+        <div id="leftProductDisplay">
+        </div>
+        <div class="rightPromoDiv">
+            <p class="promoHeading">promos & offers</p>
+            <p class="promoinputlabel">Enter promo code</p>
+            <div class="promoInputDiv">
+                <input type="text" class="promoInput">
+                <buttom class="promoApplyButton">APPLY</buttom>
 
             </div>
-        </div>
-        <div class="rightProductDiv">
-            <p class="productsMainHeading">Amor De Luxe Products</p>
-            <div class="productList" id="productsList">
-                <!-- displayed dynamically -->
+            <div class="subtotalDiv">
+                <p class="subtototalText">Subtotal</p>
+                <p class="subtotalNumber">INR <span id="grandTotal"></span></p>
             </div>
+            <p class="shippingDuty">Shipping, duties & taxes calculated at checkout (if applicable)</p>
+            <a href="./checkout.html">
+                <button class="proceedToCheckout">PROCEED TO CHECKOUT</button>
+            </a>
+            <p class="itemAvailability">Item availability and pricing are not guaranteed.</p>
         </div>
     </div>
-
     <footer>
         <div class="footerContainer">
             <ul>
@@ -207,6 +191,6 @@
         </div>
     </footer>
 </body>
-<script src="./products.js"></script>
+<script src="./cart.js"></script>
 
 </html>

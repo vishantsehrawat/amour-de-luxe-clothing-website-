@@ -24,6 +24,7 @@ body {
     font-weight: 900;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 10px;
 }
 .saleHeader a {
@@ -47,7 +48,6 @@ body {
 .logo img {
     /* height: 100px; */
     width: 150px;
-    cursor: pointer;
 }
 .searchRight {
     display: flex;
@@ -86,7 +86,85 @@ body {
     cursor: pointer;
     margin-left: 10px;
 }
-
+.loginBtn {
+    padding: 5px 14px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-right: 20px;
+}
+.loginDiv {
+    animation: vibrate 0.5s;
+    animation-iteration-count: infinite;
+}
+.loginBtn a {
+    text-decoration: none;
+    color: white;
+}
+.loginBtn a:hover {
+    color: white;
+}
+.loginDiv:hover {
+    animation: none;
+}
+.shopNowBtn {
+    padding: 5px 14px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-right: 20px;
+}
+.shopNowDiv {
+    animation: vibrate 0.5s;
+    animation-iteration-count: infinite;
+}
+.shopNowBtn a {
+    text-decoration: none;
+    color: white;
+}
+.shopNowBtn a:hover {
+    color: white;
+}
+.shopNowDiv:hover {
+    animation: none;
+}
+@keyframes vibrate {
+    0% {
+        transform: translate(0.5px, 0.5px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-02px, -5px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-0.5px, 0.5px) rotate(1deg);
+    }
+    30% {
+        transform: translate(0.5px, 0.5px) rotate(0deg);
+    }
+    40% {
+        transform: translate(0.5px, -0.5px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-0.5px, 0.5px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-0.5px, 0.5px) rotate(0deg);
+    }
+    70% {
+        transform: translate(0.5px, 0.5px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-0.5px, -0.5px) rotate(1deg);
+    }
+    90% {
+        transform: translate(0.5px, 0.5px) rotate(0deg);
+    }
+    100% {
+        transform: translate(0.5px, -0.5px) rotate(-1deg);
+    }
+}
 /* 33333333333333333333333333333333333333333333333333333333 */
 .section3 {
     padding: 0 4%;
@@ -115,6 +193,18 @@ ul.shoppingLinks li {
 }
 ul.shoppingLinks li:hover {
     border-bottom: 2px solid black;
+}
+/* .women:focus-visible .womenDDWrapper {
+    display: block;
+} */
+
+/* 44444444444444444444444444444444444444444444444444444 */
+.section4 {
+    padding: 0 4%;
+}
+.saleBanner {
+    background-color: red;
+    height: 60px;
 }
 .womenDDWrapper {
     /* display: none; */
@@ -153,87 +243,6 @@ ul.shoppingLinks li:hover {
 .womenDD ul li:hover {
     font-size: 14px;
 }
-
-/* LEFT PANEL #############################################3 */
-.sectionLeftPanel {
-    display: flex;
-}
-.leftPanel {
-    width: 20%;
-}
-.rightProductDiv {
-    width: 80%;
-    /* border: 1px solid red; */
-}
-.productsMainHeading {
-    font-size: 20px;
-    font-weight: 600;
-    line-height: 1.6;
-    padding: 20px;
-    text-transform: uppercase;
-    border-bottom: 3px solid black;
-}
-/* dynamic showing of .productList */
-.productList {
-    padding: 20px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-.productCard {
-    /* padding: 10px; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
-        rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
-    border-radius: 10px;
-    overflow: hidden;
-}
-.productCard img {
-    width: 100%;
-    border-radius: 10px;
-    /* z-index: -1; */
-}
-.productCard:hover {
-    transform: scale(1.03);
-    transition: 0.2s all ease-in-out;
-}
-.productCard .productName {
-    font-size: 18px;
-    text-transform: uppercase;
-    padding: 5px 10px;
-    margin: 0;
-    font-weight: 500;
-}
-.productPrice {
-    font-size: 14px;
-    color: green;
-    padding: 0 10px;
-    font-weight: 700;
-}
-.productCard .productPrice::before {
-    content: "Rs ";
-}
-.addToCartBtn {
-    border: none;
-    width: 95%;
-    margin: 0 auto;
-    background-color: white;
-    border: 1px solid black;
-    color: black;
-    padding: 3px 10px;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: 500;
-    margin-bottom: 10px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-}
-/* dynamic showinng of product list   enddddddddddddddddddddd */
-
-/* ------------------------------------------- */
 
 /* footerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
 .footerContainer {

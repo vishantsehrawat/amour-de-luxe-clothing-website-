@@ -24,7 +24,6 @@ body {
     font-weight: 900;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 10px;
 }
 .saleHeader a {
@@ -85,6 +84,85 @@ body {
     width: 40px;
     cursor: pointer;
     margin-left: 10px;
+}
+.loginBtn {
+    padding: 5px 14px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-right: 20px;
+}
+.loginDiv {
+    animation: vibrate 0.5s;
+    animation-iteration-count: infinite;
+}
+.loginBtn a {
+    text-decoration: none;
+    color: white;
+}
+.loginBtn a:hover {
+    color: white;
+}
+.loginDiv:hover {
+    animation: none;
+}
+.shopNowBtn {
+    padding: 5px 14px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-right: 20px;
+}
+.shopNowDiv {
+    animation: vibrate 0.5s;
+    animation-iteration-count: infinite;
+}
+.shopNowBtn a {
+    text-decoration: none;
+    color: white;
+}
+.shopNowBtn a:hover {
+    color: white;
+}
+.shopNowDiv:hover {
+    animation: none;
+}
+@keyframes vibrate {
+    0% {
+        transform: translate(0.5px, 0.5px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-02px, -5px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-0.5px, 0.5px) rotate(1deg);
+    }
+    30% {
+        transform: translate(0.5px, 0.5px) rotate(0deg);
+    }
+    40% {
+        transform: translate(0.5px, -0.5px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-0.5px, 0.5px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-0.5px, 0.5px) rotate(0deg);
+    }
+    70% {
+        transform: translate(0.5px, 0.5px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-0.5px, -0.5px) rotate(1deg);
+    }
+    90% {
+        transform: translate(0.5px, 0.5px) rotate(0deg);
+    }
+    100% {
+        transform: translate(0.5px, -0.5px) rotate(-1deg);
+    }
 }
 /* 33333333333333333333333333333333333333333333333333333333 */
 .section3 {

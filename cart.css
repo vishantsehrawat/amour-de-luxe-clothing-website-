@@ -24,6 +24,7 @@ body {
     font-weight: 900;
     display: flex;
     justify-content: center;
+    align-items: center;
     padding: 10px;
 }
 .saleHeader a {
@@ -47,7 +48,6 @@ body {
 .logo img {
     /* height: 100px; */
     width: 150px;
-    cursor: pointer;
 }
 .searchRight {
     display: flex;
@@ -86,7 +86,85 @@ body {
     cursor: pointer;
     margin-left: 10px;
 }
-
+.loginBtn {
+    padding: 5px 14px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-right: 20px;
+}
+.loginDiv {
+    animation: vibrate 0.5s;
+    animation-iteration-count: infinite;
+}
+.loginBtn a {
+    text-decoration: none;
+    color: white;
+}
+.loginBtn a:hover {
+    color: white;
+}
+.loginDiv:hover {
+    animation: none;
+}
+.shopNowBtn {
+    padding: 5px 14px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+    margin-right: 20px;
+}
+.shopNowDiv {
+    animation: vibrate 0.5s;
+    animation-iteration-count: infinite;
+}
+.shopNowBtn a {
+    text-decoration: none;
+    color: white;
+}
+.shopNowBtn a:hover {
+    color: white;
+}
+.shopNowDiv:hover {
+    animation: none;
+}
+@keyframes vibrate {
+    0% {
+        transform: translate(0.5px, 0.5px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-02px, -5px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-0.5px, 0.5px) rotate(1deg);
+    }
+    30% {
+        transform: translate(0.5px, 0.5px) rotate(0deg);
+    }
+    40% {
+        transform: translate(0.5px, -0.5px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-0.5px, 0.5px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-0.5px, 0.5px) rotate(0deg);
+    }
+    70% {
+        transform: translate(0.5px, 0.5px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-0.5px, -0.5px) rotate(1deg);
+    }
+    90% {
+        transform: translate(0.5px, 0.5px) rotate(0deg);
+    }
+    100% {
+        transform: translate(0.5px, -0.5px) rotate(-1deg);
+    }
+}
 /* 33333333333333333333333333333333333333333333333333333333 */
 .section3 {
     padding: 0 4%;
@@ -115,6 +193,18 @@ ul.shoppingLinks li {
 }
 ul.shoppingLinks li:hover {
     border-bottom: 2px solid black;
+}
+/* .women:focus-visible .womenDDWrapper {
+    display: block;
+} */
+
+/* 44444444444444444444444444444444444444444444444444444 */
+.section4 {
+    padding: 0 4%;
+}
+.saleBanner {
+    background-color: red;
+    height: 60px;
 }
 .womenDDWrapper {
     /* display: none; */
@@ -154,34 +244,103 @@ ul.shoppingLinks li:hover {
     font-size: 14px;
 }
 
-/* LEFT PANEL #############################################3 */
-.sectionLeftPanel {
-    display: flex;
+/* cart heading and container  */
+.leftProductDisplay {
 }
-.leftPanel {
-    width: 20%;
+.cartContainer {
+    margin: 20px 4%;
 }
-.rightProductDiv {
-    width: 80%;
-    /* border: 1px solid red; */
-}
-.productsMainHeading {
+.cartHeading {
+    margin: 0 4%;
     font-size: 20px;
+    color: black;
     font-weight: 600;
-    line-height: 1.6;
-    padding: 20px;
     text-transform: uppercase;
+    padding: 10px 0;
     border-bottom: 3px solid black;
 }
-/* dynamic showing of .productList */
-.productList {
+#leftProductDisplay {
+    width: 70%;
+}
+.rightPromoDiv {
+    width: 30%;
+}
+
+.cartContainer {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+.rightPromoDiv {
+    padding: 20px;
+    border: 1px solid lightgrey;
+    height: fit-content;
+}
+.promoHeading {
+    text-transform: uppercase;
+    font-size: 14px;
+    color: black;
+    font-weight: 700;
+    padding: 10px 0;
+}
+.promoinputlabel {
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 0;
+}
+.promoInputDiv {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.promoInput {
+    border: 1px solid lightgrey;
+    padding: 10px 0;
+    height: 40px;
+    width: 70%;
+}
+.promoApplyButton {
+    color: white;
+    background-color: black;
+    padding: 10px 20px;
+}
+.subtotalDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    border-bottom: 2px solid black;
+}
+.shippingDuty,
+.itemAvailability {
+    font-size: 12px;
+    color: black;
+    font-weight: 300;
+    font-family: Avenir, Arial;
+    line-height: 1.6;
+    padding: 10px 0;
+}
+.proceedToCheckout {
+    font-size: 14px;
+    letter-spacing: 1px;
+    color: white;
+    background-color: black;
+    width: 100%;
+    padding: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* --------------------------------------- */
+/* dynamic showinng of cart list  */
+#leftProductDisplay {
     padding: 20px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
+    gap: 20px;
 }
 .productCard {
-    /* padding: 10px; */
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -216,10 +375,10 @@ ul.shoppingLinks li:hover {
 .productCard .productPrice::before {
     content: "Rs ";
 }
-.addToCartBtn {
+.removeProductBtn {
     border: none;
     width: 95%;
-    margin: 0 auto;
+    margin: 10px auto;
     background-color: white;
     border: 1px solid black;
     color: black;
@@ -227,13 +386,10 @@ ul.shoppingLinks li:hover {
     border-radius: 5px;
     font-size: 14px;
     font-weight: 500;
-    margin-bottom: 10px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
         rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
-/* dynamic showinng of product list   enddddddddddddddddddddd */
-
-/* ------------------------------------------- */
+/* dynamic showinng of cart list  enddddddddddddddddddddd */
 
 /* footerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
 .footerContainer {
