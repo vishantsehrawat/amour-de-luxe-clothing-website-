@@ -32,6 +32,34 @@ body {
 
 /* --------loader ------------------ */
 
+/* modal css############################### */
+.modal-dialog {
+    margin-top: 20vh !important;
+}
+.modal-header {
+    background-color: black;
+    color: white;
+    border-bottom: none !important;
+}
+.modal-footer {
+    background-color: black;
+    border-top: none !important;
+}
+.modal-body p {
+    font-size: 20px;
+}
+.modal-body span {
+    font-size: 14px;
+    color: grey;
+}
+.modalKey {
+    margin-top: 20px;
+}
+.btn {
+    color: white !important;
+    background-color: black !important;
+}
+/* modal css end -------------------------------- */
 /* 11111111111111111111111111111111111111111111111111 */
 .saleHeader {
     height: 40px;
@@ -199,7 +227,7 @@ ul.shoppingLinks {
     align-items: center;
     flex-wrap: wrap;
 
-    justify-content: flex-start;
+    justify-content: space-between;
 }
 ul.shoppingLinks li {
     padding: 10px;
@@ -223,7 +251,10 @@ ul.shoppingLinks li:hover {
 }
 .saleBanner {
     background-color: red;
-    height: 60px;
+    /* height: 60px; */
+}
+.saleBanner img {
+    width: 100%;
 }
 .womenDDWrapper {
     /* display: none; */
@@ -242,7 +273,7 @@ ul.shoppingLinks li:hover {
     align-items: flex-start;
 }
 .womenDD ul {
-    width: 25%;
+    width: 20%;
     font-size: 14px;
     font-weight: 700;
     line-height: 18px;

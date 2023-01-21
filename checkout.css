@@ -14,6 +14,25 @@ ul {
 body {
     font-family: Avenir, Helvetica Neue, Helvetica, Arial, sans-serif;
 }
+/* POPUP FOR TRANSACTION SUCCESSFULL##################33 */
+.popup {
+    position: relative;
+}
+.popup p {
+    visibility: hidden;
+    position: absolute;
+    top: 30vh;
+    padding: 30px;
+    background-color: green;
+    color: white;
+    font-size: 16px;
+    font-weight: 700;
+}
+.popup p .show{
+    visibility: visible;
+}
+/* POPUP FOR TRANSACTION SUCCESSFULL END ------------ */
+
 /* 11111111111111111111111111111111111111111111111111 */
 .saleHeader {
     height: 40px;
@@ -182,8 +201,7 @@ ul.shoppingLinks {
     flex-wrap: wrap;
 
     align-items: center;
-    justify-content: flex-start;
-
+    justify-content: space-between;
 }
 ul.shoppingLinks li {
     padding: 10px;
@@ -225,7 +243,7 @@ ul.shoppingLinks li:hover {
     align-items: flex-start;
 }
 .womenDD ul {
-    width: 25%;
+    width: 20%;
     font-size: 14px;
     font-weight: 700;
     line-height: 18px;
@@ -246,7 +264,123 @@ ul.shoppingLinks li:hover {
 .womenDD ul li:hover {
     font-size: 14px;
 }
+/* page form  */
+.checkoutContainer {
+    display: flex;
+}
+.rightPaymentDiv {
+    width: 50%;
+}
+.poweredBy p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainFormDiv {
+    margin: 40px 4%;
+    /* border: 1px solid red; */
+    width: 50%;
+    padding: 60px 50px;
+    border-radius: 10px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+        rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+}
+.rightPaymentDiv {
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 4px 8px -2px,
+        rgba(9, 30, 66, 0.08) 0px 0px 0px 1px;
+    margin: 40px 4%;
+    border-radius: 10px;
+    padding: 40px;
+}
+.paymentHeading img {
+    width: 100px;
+}
+.form input {
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid grey;
+    margin: 10px 5px 10px 0px;
+    padding-left: 10px;
+}
+::placeholder {
+    color: grey;
+}
+.email,
+.address {
+    width: 100%;
+}
+.fname,
+.lname,
+.address2,
+.pincode,
+.city,
+.phone {
+    width: 45%;
+}
+.completeTransaction {
+    width: 100%;
+    background-color: black;
+    color: white;
+    padding: 10px;
+    margin-top: 15px;
+}
+.checkNewProduct {
+    font-size: 20px;
+    font-weight: 700;
+    text-align: center;
+    padding: 20px;
+}
+.advImg img {
+    width: 100%;
+    animation: zoom 8s;
+    animation-iteration-count: infinite;
+}
+@keyframes zoom {
+    0% {
+        transform: scale(0.9) rotate(0deg);
+    }
 
+    30% {
+        transform: scale(0.8) rotate(0deg);
+    }
+    40% {
+        transform: scale(0.9) rotate(1deg);
+    }
+
+    60% {
+        transform: scale(0.9) rotate(0deg);
+    }
+    70% {
+        transform: scale(0.9) rotate(-1deg);
+    }
+
+    90% {
+        transform: scale(0.9) rotate(0deg);
+    }
+    100% {
+        transform: rotate(-1deg);
+    }
+}
+.paypartners {
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+    border-top: 2px solid black;
+    padding: 10px;
+    margin-top: 25px;
+}
+.partnerImages {
+    display: grid;
+    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+}
+.partnerImages img {
+    width: 100%;
+}
+
+/* page form end------------------------ */
 /* footerrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrrr */
 .footerContainer {
     padding: 40px 4%;
