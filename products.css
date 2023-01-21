@@ -157,13 +157,61 @@ ul.shoppingLinks li:hover {
 /* LEFT PANEL #############################################3 */
 .sectionLeftPanel {
     display: flex;
+    position: relative;
 }
 .leftPanel {
     width: 20%;
+    background-color: rgb(245, 248, 251);
+    /* border-right: 5px solid black; */
+    padding: 20px;
+}
+.filtebyDiv {
+}
+.filterbyText {
+    font-size: 20px;
+    font-weight: 700;
+}
+#filter {
+    width: 90%;
+    height: 40px;
+    font-size: 14px;
+    color: grey;
+    padding: 5px;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+#filter option {
+    font-size: 14px;
+    color: white;
+    height: 20px;
+    padding: 10px 0;
+}
+#filter option:hover {
+    background-color: black;
+    font-size: 14px;
+    color: white;
+    padding: 10px 0;
+}
+option {
+    background-color: black;
+    color: white;
+}
+.sortbyDiv {
+}
+.sortbyText {
+    font-size: 20px;
+    margin-top: 20px;
+    font-weight: 700;
 }
 .rightProductDiv {
     width: 80%;
     /* border: 1px solid red; */
+}
+.rightHeadingDiv {
+    border-bottom: 3px solid black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .productsMainHeading {
     font-size: 20px;
@@ -171,7 +219,60 @@ ul.shoppingLinks li:hover {
     line-height: 1.6;
     padding: 20px;
     text-transform: uppercase;
-    border-bottom: 3px solid black;
+    margin: 0;
+}
+.gotoCartBtn {
+    animation: vibrate 0.5s;
+    animation-iteration-count: infinite;
+    padding: 5px 14px;
+    margin-right: 30px;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+.gotoCartBtn:hover {
+    color: white;
+    animation: none;
+}
+.gotoCartBtn a {
+    text-decoration: none;
+    color: white;
+}
+@keyframes vibrate {
+    0% {
+        transform: translate(0.5px, 0.5px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-02px, -5px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-0.5px, 0.5px) rotate(1deg);
+    }
+    30% {
+        transform: translate(0.5px, 0.5px) rotate(0deg);
+    }
+    40% {
+        transform: translate(0.5px, -0.5px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-0.5px, 0.5px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-0.5px, 0.5px) rotate(0deg);
+    }
+    70% {
+        transform: translate(0.5px, 0.5px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-0.5px, -0.5px) rotate(1deg);
+    }
+    90% {
+        transform: translate(0.5px, 0.5px) rotate(0deg);
+    }
+    100% {
+        transform: translate(0.5px, -0.5px) rotate(-1deg);
+    }
 }
 /* dynamic showing of .productList */
 .productList {
@@ -179,17 +280,20 @@ ul.shoppingLinks li:hover {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
+    margin-right: 4%;
 }
 .productCard {
-    /* padding: 10px; */
+    padding: 10px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
     box-shadow: rgba(67, 71, 85, 0.27) 0px 0px 0.25em,
-        rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
-    border-radius: 10px;
+        rgba(90, 125, 188, 0.05) 0px 0.25em 1em inset;
+    border-radius: 2px;
     overflow: hidden;
+
+    /* background-color: rgb(237, 235, 235); */
 }
 .productCard img {
     width: 100%;
@@ -223,7 +327,7 @@ ul.shoppingLinks li:hover {
     background-color: white;
     border: 1px solid black;
     color: black;
-    padding: 3px 10px;
+    padding: 10px 10px;
     border-radius: 5px;
     font-size: 14px;
     font-weight: 500;

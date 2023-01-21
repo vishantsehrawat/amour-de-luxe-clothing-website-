@@ -330,6 +330,10 @@ ul.shoppingLinks li:hover {
     font-weight: 600;
     cursor: pointer;
 }
+#grandTotal{
+    color: rgb(27, 171, 5);
+    font-weight: 900;
+}
 
 /* --------------------------------------- */
 /* dynamic showinng of cart list  */

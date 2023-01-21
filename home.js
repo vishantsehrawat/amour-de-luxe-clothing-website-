@@ -1,3 +1,20 @@
+let loginSuccessfull = JSON.parse(localStorage.getItem("loginSuccess"));
+console.log(loginSuccessfull);
+
+// LOADER
+document.documentElement.classList.add("js");
+
+// dom is loaded
+jQuery(document).ready(function ($) {
+    // fade out preloader
+    $("#preloader").fadeOut(1000, function () {
+        setTimeout(() => {
+            $(this).remove();
+        }, 4000);
+    });
+});
+// ------------------LOADER END-------------
+
 // show modal on page load
 
 // $(window).on("load", function () {

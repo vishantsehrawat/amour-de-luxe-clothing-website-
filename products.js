@@ -21,7 +21,7 @@ async function getData() {
     // console.log(products);
     displayData(products);
 }
-
+//DISPLAYING THE PRODUCTS ON THE PAGE
 let productContainer = document.getElementById("productsList");
 function displayData(products) {
     // console.log(products);
@@ -55,3 +55,29 @@ function displayData(products) {
         productContainer.append(product);
     });
 }
+
+//Sorting DATA ACCORDING TO THE PRICE
+let filterBy = document.getElementById("filter");
+filterBy.addEventListener("change", function (e) {
+    let filterByValue = e.target.value;
+    // console.log(filterByValue);
+    if (filterByValue.toLowerCase() == "default") {
+        location.reload();
+        displayData(products);
+    } else if (filterByValue.toLowerCase() == "low to high") {
+        let sortedData = products.sort((a, b) => {
+            return a.price.localeCompare(b.price);
+        });
+        displayData(sortedData);
+    } else if (filterByValue.toLowerCase() == "high to low") {
+        let sortedData = products.sort((b, a) => {
+            return a.price.localeCompare(b.price);
+        });
+        displayData(sortedData);
+    }
+});
+
+// console.log("a", data);
+// running loop over data
+
+// FILTERING --------------------
