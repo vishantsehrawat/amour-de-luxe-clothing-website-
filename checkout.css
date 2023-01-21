@@ -240,6 +240,7 @@ ul.shoppingLinks li:hover {
     flex-direction: column;
     flex-wrap: wrap;
     height: 55vh;
+    transition: all 0.3s ease;
     align-items: flex-start;
 }
 .womenDD ul {
