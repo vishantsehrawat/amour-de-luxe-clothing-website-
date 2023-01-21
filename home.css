@@ -23,10 +23,12 @@ body {
     width: 100%;
     height: 100%;
     overflow: visible;
-    
+
     /* You can change the background color and image URL here.  This solution works with animated .svg and animated .gif */
-    background: #ffffff url('https://gist.githubusercontent.com/condensed-io/d4da34ecfdeda137ad4787fbd244ed27/raw/b96d939e9baf98ff79394c11af83c10a6acdd241/pac.svg') no-repeat center center;
-  }
+    background: #ffffff
+        url("https://gist.githubusercontent.com/condensed-io/d4da34ecfdeda137ad4787fbd244ed27/raw/b96d939e9baf98ff79394c11af83c10a6acdd241/pac.svg")
+        no-repeat center center;
+}
 
 /* --------loader ------------------ */
 
@@ -195,7 +197,9 @@ ul.shoppingLinks {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
+
+    justify-content: flex-start;
 }
 ul.shoppingLinks li {
     padding: 10px;
@@ -263,7 +267,7 @@ ul.shoppingLinks li:hover {
 /* 55555555555555555555555555555555555555555555555555555555 */
 .bannerSection {
     width: 100%;
-    height: 600px;
+    /* height: 600px; */
     padding: 0 4%;
     margin: 20px 0;
 }
@@ -416,7 +420,9 @@ p.itemPrice {
     font-weight: 700;
     padding: 4px;
 }
-
+.winterEssentials img {
+    width: 100%;
+}
 /* 9999999999999999999999999999999999999999999999999999999999999999999999999*/
 .section9 {
     margin: 40px 4%;
@@ -473,6 +479,8 @@ ul.followUs img {
 }
 .followUsImgDiv {
     display: flex;
+    flex-wrap: wrap;
+
     justify-content: flex-start;
     gap: 30px;
 }

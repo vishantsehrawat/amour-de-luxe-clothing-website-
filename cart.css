@@ -179,8 +179,10 @@ body {
 ul.shoppingLinks {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
+
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
 }
 ul.shoppingLinks li {
     padding: 10px;
@@ -431,6 +433,7 @@ ul.followUs img {
 }
 .followUsImgDiv {
     display: flex;
+    flex-wrap: wrap;
     justify-content: flex-start;
     gap: 30px;
 }
