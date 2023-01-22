@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="products.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
+        integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+</head>
+
+<body>
+
+    <!-- main black sale header -->
+    <section>
+        <div class="saleHeader">
+            <p>2 days only! Save 65-75% on a large selection of items. Ends 1/18 </p>
+            <a href="#">SHOP NOW</a>
+        </div>
+    </section>
+    <!-- first header -->
+    <section class="section2">
+        <div class="searchHeader">
+            <a href="./home.html">
+                <div class="logo">
+                    <img src="./images/logo.png" alt="img">
+                </div>
+            </a>
+            <div class="searchRight">
+
+                <div class="inputBox">
+                    <input type="text" placeholder="Search">
+                </div>
+                <div class="cartLogo">
+                    <a href="./cart.html">
+                        <img src="./images/cart.svg" alt="img">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- links header  -->
+    <section class="section3">
+        <div class="linkHeader">
+            <ul class="shoppingLinks" onmouseover='mouseOverToggle()'>
+                <li class="women">WOMEN</li>
+                <li>SHOES</li>
+                <li>HANDBAGS</li>
+                <li>JEWELERY</li>
+                <li>MEN</li>
+                <li>KIDS</li>
+                <li>HOME</li>
+                <li>SALE</li>
+                <li>DESGINERS</li>
+                <li>EDITORIAL</li>
+                <li>GIFTS</li>
+            </ul>
+        </div>
+    </section>
+    <!-- dropdown-content -->
+    <div class="womenDDWrapper" id="womenDD" onmouseover='mouseOverToggle()' onmouseout='mouseOutToggle()'>
+        <ul class="womenDD">
+            <ul>Sale & Clearence
+                <li>Shop All</li>
+                <li>Coats</li>
+                <li>Dresses</li>
+                <li>Sweaters</li>
+                <li>Tops</li>
+            </ul>
+            <ul>Clothing
+                <li>Active & Workout</li>
+                <li>Blazers</li>
+                <li>Cashmere</li>
+                <li>Coats</li>
+                <li>Dresses</li>
+                <li>Jeans</li>
+                <li>Jumpsuit</li>
+                <li>Lingerie</li>
+                <li>Maternity</li>
+                <li>Sweaters</li>
+                <li>Shorts</li>
+                <li>Tops</li>
+                <li>Swimsuit</li>
+            </ul>
+            <ul>Dresses
+                <li>Coats</li>
+                <li>Best Sellers</li>
+                <li>Casual</li>
+                <li>Party</li>
+                <li>Midi</li>
+                <li>Wear to Work</li>
+            </ul>
+            <ul>What to Wear
+                <li>Going out</li>
+                <li>Hitting the Slopes</li>
+                <li>The office</li>
+                <li>Vacation</li>
+                <li>Wedding</li>
+            </ul>
+            <ul>Designer
+                <li>New Arrivals</li>
+                <li>Best Sellers</li>
+                <li>Trendy</li>
+                <li>Most Wanted</li>
+                <li>Anniversary</li>
+            </ul>
+            <ul>Coats & Jackets
+                <li>Puffer</li>
+                <li>Shop All</li>
+            </ul>
+
+        </ul>
+    </div>
+    <!-- LEFT PANEL` -->
+    <div class="sectionLeftPanel">
+        <div class="leftPanel">
+            <div class="filterbyDiv">
+                <p class="filterbyText">Filter By Price</p>
+                <select name="price" id="filter">
+                    <option value="Default">Default</option>
+                    <option value="Low To High">Low To High</option>
+                    <option value="High To Low">High To Low</option>
+                </select>
+            </div>
+            <!-- <div class="sortbyDiv">
+                <p class="sortbyText">Sort By</p>
+
+
+            </div> -->
+        </div>
+        <div class="rightProductDiv">
+            <div class="rightHeadingDiv">
+                <p class="productsMainHeading">Amor De Luxe Products</p>
+                <button class="gotoCartBtn"><a href="./cart.html">Go To Cart</a></button>
+            </div>
+            <div class="productList" id="productsList">
+                <!-- displayed dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footerContainer">
+            <ul>
+                <p class="heading">CUSTOMER SERVICE</p>
+                <li>1-200-3615-42364</li>
+                <li>FAQ</li>
+                <li>Visitor Services</li>
+                <li>Domestic Site</li>
+            </ul>
+            <ul>
+                <p class="heading">YOUR ORDER</p>
+                <li>Order Status & history</li>
+                <li>Shipping Policy</li>
+                <li>Returns & Exchanges</li>
+            </ul>
+            <ul>
+                <p class="heading">ABOUT US</p>
+                <li>Be the Change</li>
+                <li>Careers</li>
+            </ul>
+            <ul class="followUs">
+
+                <p class="heading">FOLLOW US</p>
+                <div class="followUsImgDiv">
+                    <img src="./images/facebook.svg" alt="img">
+                    <img src="./images/twitter.svg" alt="img">
+                    <img src="./images/pinterest.svg" alt="img">
+                    <img src="./images/insta.svg" alt="img">
+                </div>
+
+            </ul>
+        </div>
+        <div class="footer2">
+            <ul>
+                <li>Terms of Use</li>
+                <li>Privacy</li>
+                <li>Cookies Preferences</li>
+                <li>Do Not Sell or Share My Personal Information</li>
+                <li>CA Privacy Rights</li>
+            </ul>
+            <ul>
+                <li>CA Transparency in Supply Chains Act</li>
+                <li>Interest Based Ads</li>
+                <li>Customer Bill of Rights</li>
+                <li>Product Recalls
+                <li>Pricing Policy</li>
+                </li>
+            </ul>
+            <ul>
+                <li>© 2023 Bloomingdale's. 1000 Third Avenue New York, NY 10022. Request our corporate name and address.
+                </li>
+
+            </ul>
+            <ul>
+                <li>Like No Other Store in the World</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<script src="./products.js"></script>
+
+</html>
