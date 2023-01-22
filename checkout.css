@@ -323,6 +323,7 @@ ul.shoppingLinks li:hover {
     background-color: black;
     color: white;
     padding: 10px;
+    cursor: pointer;
     margin-top: 15px;
 }
 .checkNewProduct {
